@@ -1,0 +1,24 @@
+@import 'bootstrap';
+
+@import 'bootstrap-responsive';
+
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+$btnPrimaryBackground: purple;
+
+body{
+    padding-top: 60px;
+}
+
+.navbar-inner{
+    @include box-shadow(none !important);
+    border: 0;
+}
+
+.footer{
+    margin-top: 50px;
+    color: $grayLight;
+    a{
+        color: $gray;
+    }
+}

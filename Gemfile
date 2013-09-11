@@ -7,6 +7,7 @@ gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'simple_form'
 gem 'paperclip'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'sqlite3'

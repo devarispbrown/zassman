@@ -3,7 +3,7 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.json
   def index
-    @assets = Asset.all
+    @assets = Asset.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb

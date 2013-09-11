@@ -1,20 +1,5 @@
-<h1>Listing Assets</h1>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Image</th>
-        <th>Name</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
+<div id="assets">
+  <%= render @assets %>
+</div>
 
-    <tbody>
-      <%= render @assets %>
-    </tbody>
-  </table>
 
-  <br />
-
-  <%= link_to 'New Asset', new_asset_path %>

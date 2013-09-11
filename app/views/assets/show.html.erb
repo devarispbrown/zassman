@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="span6 offset3">
+    <div class="well">
+
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <b>Box link:</b>
+        <%= @asset.box_link %>
+      </p>
+
+      <p>
+        <b>Invision link:</b>
+        <%= @asset.invision_link %>
+      </p>
+
+      <p>
+        <b>Css:</b>
+        <%= @asset.css %>
+      </p>
+
+      <p>
+        <b>Name:</b>
+        <%= @asset.name %>
+      </p>
+
+
+      <%= link_to 'Edit', edit_asset_path(@asset) %> |
+      <%= link_to 'Back', assets_path %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  box_link: MyString
+  invision_link: MyString
+  css: MyText
+  name: MyString
+
+two:
+  box_link: MyString
+  invision_link: MyString
+  css: MyText
+  name: MyString

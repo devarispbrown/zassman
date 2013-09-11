@@ -1,4 +1,5 @@
 class AssetsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
   # GET /assets
   # GET /assets.json
   def index
@@ -13,7 +14,7 @@ class AssetsController < ApplicationController
   # GET /assets/1
   # GET /assets/1.json
   def show
-    @asset = Asset.find(params[:id])
+    @asset = current_user.Asset.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +25,7 @@ class AssetsController < ApplicationController
   # GET /assets/new
   # GET /assets/new.json
   def new
-    @asset = Asset.new
+    @asset = current_user.Asset.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +35,13 @@ class AssetsController < ApplicationController
 
   # GET /assets/1/edit
   def edit
-    @asset = Asset.find(params[:id])
+    @asset = current_user.Asset.find(params[:id])
   end
 
   # POST /assets
   # POST /assets.json
   def create
-    @asset = Asset.new(params[:asset])
+    @asset = current_user.Asset.new(params[:asset])
 
     respond_to do |format|
       if @asset.save
@@ -56,7 +57,7 @@ class AssetsController < ApplicationController
   # PUT /assets/1
   # PUT /assets/1.json
   def update
-    @asset = Asset.find(params[:id])
+    @asset = current_user.Asset.find(params[:id])
 
     respond_to do |format|
       if @asset.update_attributes(params[:asset])
@@ -72,7 +73,7 @@ class AssetsController < ApplicationController
   # DELETE /assets/1
   # DELETE /assets/1.json
   def destroy
-    @asset = Asset.find(params[:id])
+    @asset = current_user.Asset.find(params[:id])
     @asset.destroy
 
     respond_to do |format|

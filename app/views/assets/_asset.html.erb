@@ -1,6 +1,8 @@
 <tr>
   <td><%= asset.name %></td>
   <td><%= link_to 'Show', asset %></td>
-  <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
-  <td><%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <%if current_user == asset.user %>
+    <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
+    <td><%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
 </tr>

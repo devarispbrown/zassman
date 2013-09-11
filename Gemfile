@@ -8,6 +8,8 @@ gem 'omniauth-google-oauth2'
 gem 'simple_form'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'sqlite3'

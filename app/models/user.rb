@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable, :omniauth_providers => [:google_oauth2]
  
   attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :name
-
+  validates :name, presence: true
   has_many :assets, dependent: :destroy
 
   def self.from_omniauth(auth)

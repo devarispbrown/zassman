@@ -10,6 +10,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'faker'
 
 group :development, :test do
   gem 'sqlite3'

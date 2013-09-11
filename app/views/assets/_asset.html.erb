@@ -5,7 +5,7 @@
   </p>
   <p>
     <strong>
-      Posted by <%= asset.user.name %>
+      Posted by <%= link_to asset.user.name, asset.user %>
     </strong>
   </p>
   <% if current_user == asset.user %>

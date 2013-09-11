@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'simple_form'
+gem 'paperclip'
 
 group :development, :test do
   gem 'sqlite3'

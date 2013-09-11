@@ -1,4 +1,5 @@
 <tr>
+  <td><%= image_tag asset.image(:medium) %></td>
   <td><%= asset.name %></td>
   <td><%= link_to 'Show', asset %></td>
   <%if current_user == asset.user %>

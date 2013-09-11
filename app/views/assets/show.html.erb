@@ -24,6 +24,10 @@
         <%= @asset.name %>
       </p>
 
+      <p>
+        Tags: <%= raw @asset.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+      </p>
+
       <% if current_user == @asset.user %>
         <%= link_to 'Edit', edit_asset_path(@asset) %> |
       <% end %>

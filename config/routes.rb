@@ -1,5 +1,6 @@
 Zassman::Application.routes.draw do
   get "users/show"
+  get 'tags/:tag', to: 'assets#index', as: :tag
 
   resources :assets
 

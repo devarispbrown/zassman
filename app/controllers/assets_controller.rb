@@ -3,8 +3,12 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.json
   def index
-    @assets = Asset.order("created_at desc").page(params[:page]).per_page(20)
-
+    if params[:tag]
+      @assets = Asset.tagged_with(params[:tag]).page(params[:page]).per_page(15)
+    else
+      @assets = Asset.order("created_at desc").page(params[:page]).per_page(15)
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @assets }

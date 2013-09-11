@@ -11,6 +11,7 @@ gem 'aws-sdk'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'faker'
+gem 'acts-as-taggable-on'
 
 group :development, :test do
   gem 'sqlite3'

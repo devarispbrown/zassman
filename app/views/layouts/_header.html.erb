@@ -8,7 +8,7 @@
       </a>
       <a class="brand" href="/">Zassman</a>
       <%= form_tag search_assets_path, :method => :get, :class => "navbar-search pull-left" do %>
-        <%= text_field_tag :q, params[:q] %>
+        <%= text_field_tag :q, params[:q], :class => 'search-query' %>
       <% end %>
       <div class="nav-collapse">
         <ul class="nav pull-right">

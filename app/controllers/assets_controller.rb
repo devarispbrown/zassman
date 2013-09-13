@@ -86,4 +86,14 @@ class AssetsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def search
+     if params[:q]
+       query = params[:q]
+       @search = Asset.search do
+         fulltext query
+       end
+       @search_results = @search.results
+     end
+    end
 end

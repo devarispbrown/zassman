@@ -1,0 +1,9 @@
+<h1>Search Results</h1>
+
+<% @search_results.each do |search| %>
+<div class="results">
+  <h3><%= link_to search.name, asset_path(search.id) %></h3>
+  <%= link_to (image_tag search.image(:medium)), asset_path(search.id) %>
+</div>
+
+<% end %>

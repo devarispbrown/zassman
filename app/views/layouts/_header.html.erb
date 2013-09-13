@@ -6,16 +6,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-       <a class="brand" href="/">Zassman</a>
+      <a class="brand" href="/">Zassman</a>
+      <%= form_tag search_assets_path, :method => :get, :class => "navbar-search pull-left" do %>
+        <%= text_field_tag :q, params[:q] %>
+      <% end %>
       <div class="nav-collapse">
-        <ul class="nav">
-          <li>
-            <%= link_to 'Home',  root_path %>
-          </li>
-          <li>
-            <%= link_to 'About',  about_path %>
-          </li>
-        </ul>
         <ul class="nav pull-right">
           <% if user_signed_in? %>
             <li><%= link_to "Add +", new_asset_path %></li>

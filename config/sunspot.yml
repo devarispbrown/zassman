@@ -1,0 +1,7 @@
+random_name_to_make_solr_work: true
+
+development:
+  solr:
+    hostname: localhost
+    port: 8982
+    log_level: INFO

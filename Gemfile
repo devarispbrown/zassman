@@ -12,9 +12,13 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'faker'
 gem 'acts-as-taggable-on'
+gem 'sunspot_rails'
+gem 'progress_bar'
+gem 'skylight'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'sunspot_solr'
 end
 
 group :production do

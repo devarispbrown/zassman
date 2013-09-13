@@ -1,5 +1,5 @@
 class AssetsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index]
+  before_filter :authenticate_user!, except: [:index, :show, :search]
   # GET /assets
   # GET /assets.json
   def index
@@ -19,7 +19,7 @@ class AssetsController < ApplicationController
   # GET /assets/1
   # GET /assets/1.json
   def show
-    @asset = current_user.assets.find(params[:id])
+    @asset = Asset.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

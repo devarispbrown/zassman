@@ -35,3 +35,35 @@
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="span6 offset3">
+    <div class="comments">
+      <% @asset.root_comments.each do |comment|%>
+        <div class="comment">
+          <h3><%= link_to comment.user.name, comment.user %> said:</h3>
+          <p><%= comment.body %></p>
+          <small><%= comment.created_at.strftime("Posted on %m-%e-%y %H:%M") %></small>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span6 offset3">
+    <div class="comment_form">
+      <%= simple_form_for Comment.new, url: asset_comments_path(@asset) do |f| %>
+        <%= f.input :body, label: "Comment", input_html: { rows: "3" } %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

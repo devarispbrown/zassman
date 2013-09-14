@@ -15,6 +15,7 @@ gem 'acts-as-taggable-on'
 gem 'sunspot_rails'
 gem 'progress_bar'
 gem 'skylight'
+gem 'acts_as_commentable_with_threading'
 
 group :development, :test do
   gem 'sqlite3'

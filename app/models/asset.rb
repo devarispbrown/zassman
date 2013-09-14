@@ -1,6 +1,7 @@
 class Asset < ActiveRecord::Base
   attr_accessible :box_link, :css, :invision_link, :name, :image, :image_remote_url, :tag_list
   acts_as_taggable
+  acts_as_commentable
   
   belongs_to :user
 

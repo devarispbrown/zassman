@@ -3,6 +3,7 @@ Zassman::Application.routes.draw do
   get 'tags/:tag', to: 'assets#index', as: :tag
 
   resources :assets do
+    resources :comments, only: :create
     collection do
       get :search
     end

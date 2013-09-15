@@ -1,0 +1,5 @@
+<% if comment %>
+  commented on <%= link_to comment.asset.name, comment.asset %>
+<% else %>
+  added a comment which has since been removed
+<% end %>

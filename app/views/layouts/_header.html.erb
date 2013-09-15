@@ -12,6 +12,7 @@
       <% end %>
       <div class="nav-collapse">
         <ul class="nav pull-right">
+          <li><%= link_to "Activities", activities_path %></li>
           <% if user_signed_in? %>
             <li><%= link_to "Add +", new_asset_path %></li>
             <li><%= link_to "Edit Profile", edit_user_registration_path %></li>

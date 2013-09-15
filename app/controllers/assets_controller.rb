@@ -50,6 +50,7 @@ class AssetsController < ApplicationController
 
     respond_to do |format|
       if @asset.save
+        track_activity @asset
         format.html { redirect_to @asset, notice: 'Asset was successfully created.' }
         format.json { render json: @asset, status: :created, location: @asset }
       else
@@ -66,6 +67,7 @@ class AssetsController < ApplicationController
 
     respond_to do |format|
       if @asset.update_attributes(params[:asset])
+        track_activity @asset
         format.html { redirect_to @asset, notice: 'Asset was successfully updated.' }
         format.json { head :no_content }
       else
@@ -80,6 +82,7 @@ class AssetsController < ApplicationController
   def destroy
     @asset = current_user.assets.find(params[:id])
     @asset.destroy
+    track_activity @asset
 
     respond_to do |format|
       format.html { redirect_to assets_url }

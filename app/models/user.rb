@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :name
   validates :name, presence: true
   has_many :assets, dependent: :destroy
+  has_many :activities
 
   def self.from_omniauth(auth)
     if user = User.find_by_email(auth.info.email)

@@ -91,12 +91,18 @@ class AssetsController < ApplicationController
   end
 
   def search
-     if params[:q]
-       query = params[:q]
-       @search = Asset.search do
-         fulltext query
-       end
-       @search_results = @search.results
-     end
+    # if params[:q]
+    # query = params[:q]
+    # @search = Asset.search do
+    # fulltext query
+    # end
+    # @search_results = @search.results
+    # end
+
+    if params[:q].present?
+      @search_results = Asset.search(params[:q], page: params[:page])
+    else
+      @search_results = Asset.all.page params[:page]
     end
+  end
 end

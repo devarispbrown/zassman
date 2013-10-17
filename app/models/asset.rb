@@ -14,8 +14,10 @@ class Asset < ActiveRecord::Base
                             content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] },
                             size: { less_than: 5.megabytes }
 
-  searchable do
-    text :name, :tag_list
+  searchkick
+
+  def search_data
+    as_json only: [:name, :tag_list]
   end
 
   def image_remote_url=(url_value)

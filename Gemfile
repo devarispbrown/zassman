@@ -12,7 +12,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'faker'
 gem 'acts-as-taggable-on'
-gem 'sunspot_rails'
+gem 'searchkick'
 gem 'progress_bar'
 gem 'skylight'
 gem 'acts_as_commentable_with_threading'
@@ -20,7 +20,6 @@ gem "rails_12factor"
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'sunspot_solr'
 end
 
 group :production do

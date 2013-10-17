@@ -1,9 +1,17 @@
-<div id="assets">
-  <%= render @assets %>
+<div class="jumbotron tk-proxima-nova">
+  <div class="container">
+    <h1>Zendesk Creative Assets</h1>
+    <p><b>Airy</b>, <b>Humble</b>, <b>Charming</b>, and <b>Uncomplicated</b>. These are the words that symbolize what the Zendesk Creative Department tries to create daily.</p>
+  </div>
 </div>
 
-<%= will_paginate @assets %>
+<div class="container">
+  <div id="assets">
+    <%= render @assets %>
+  </div>
 
+  <%= will_paginate @assets %>
+</div>
 
 
 

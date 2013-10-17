@@ -16,6 +16,7 @@ gem 'sunspot_rails'
 gem 'progress_bar'
 gem 'skylight'
 gem 'acts_as_commentable_with_threading'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'sqlite3'

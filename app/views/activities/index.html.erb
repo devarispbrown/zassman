@@ -1,5 +1,7 @@
-<h1>Activities</h1>
+<div class="container bodypadding">
+  <h1 class="tk-proxima-nova">Activities</h1>
 
-<% @activities.each do |activity| %>
-  <%= ActivityPresenter.new(activity, self).render_activity %>
-<% end %>
+  <% @activities.each do |activity| %>
+    <%= ActivityPresenter.new(activity, self).render_activity %>
+  <% end %>
+</div>
